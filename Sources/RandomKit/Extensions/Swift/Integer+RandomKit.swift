@@ -587,11 +587,12 @@ extension UInt: UnsafeRandom, RandomWithMax, RandomWithMin, RandomToValue, Rando
 
     /// Generates a random value of `Self` using `randomGenerator`.
     public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> UInt {
-        if MemoryLayout<Int>.size == 8 {
-            return UInt(randomGenerator.random64())
-        } else {
-            return UInt(randomGenerator.random32())
-        }
+        return 0
+//        if MemoryLayout<Int>.size == 8 {
+//            return UInt(randomGenerator.random64())
+//        } else {
+//            return UInt(randomGenerator.random32())
+//        }
     }
 
     #if !swift(>=3.2)
@@ -614,7 +615,8 @@ extension UInt64: UnsafeRandom, RandomWithMax, RandomWithMin, RandomToValue, Ran
 
     /// Generates a random value of `Self` using `randomGenerator`.
     public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> UInt64 {
-        return randomGenerator.random64()
+        return 0
+//        return randomGenerator.random64()
     }
 
     #if !swift(>=3.2)
@@ -629,7 +631,8 @@ extension UInt32: UnsafeRandom, RandomWithMax, RandomWithMin, RandomToValue, Ran
 
     /// Generates a random value of `Self` using `randomGenerator`.
     public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> UInt32 {
-        return randomGenerator.random32()
+        return 0
+//        return randomGenerator.random32()
     }
 
     #if !swift(>=3.2)
@@ -644,7 +647,8 @@ extension UInt16: UnsafeRandom, RandomWithMax, RandomWithMin, RandomToValue, Ran
 
     /// Generates a random value of `Self` using `randomGenerator`.
     public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> UInt16 {
-        return randomGenerator.random16()
+        return 0
+//        return randomGenerator.random16()
     }
 
     #if !swift(>=3.2)
@@ -659,7 +663,8 @@ extension UInt8: UnsafeRandom, RandomWithMax, RandomWithMin, RandomToValue, Rand
 
     /// Generates a random value of `Self` using `randomGenerator`.
     public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> UInt8 {
-        return randomGenerator.random8()
+        return 0
+//        return randomGenerator.random8()
     }
 
     #if !swift(>=3.2)

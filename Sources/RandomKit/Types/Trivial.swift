@@ -32,20 +32,21 @@
 ///   is extremely unsafe to not meet this condition.
 public protocol Trivial {}
 
-extension Int: Trivial {}
-extension Int64: Trivial {}
-extension Int32: Trivial {}
-extension Int16: Trivial {}
-extension Int8: Trivial {}
-extension UInt: Trivial {}
-extension UInt64: Trivial {}
-extension UInt32: Trivial {}
-extension UInt16: Trivial {}
-extension UInt8: Trivial {}
+//extension Int: Trivial {}
+//extension Int64: Trivial {}
+//extension Int32: Trivial {}
+//extension Int16: Trivial {}
+//extension Int8: Trivial {}
+//extension UInt: Trivial {}
+//extension UInt64: Trivial {}
+//extension UInt32: Trivial {}
+//extension UInt16: Trivial {}
+//extension UInt8: Trivial {}
+//
+//extension Trivial where Self: Random {
+//    /// Generates a random value of `Self` using `randomGenerator`.
+//    public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Self {
+////        return randomGenerator.randomUnsafeValue()
+//    }
+//}
 
-extension Trivial where Self: Random {
-    /// Generates a random value of `Self` using `randomGenerator`.
-    public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Self {
-        return randomGenerator.randomUnsafeValue()
-    }
-}

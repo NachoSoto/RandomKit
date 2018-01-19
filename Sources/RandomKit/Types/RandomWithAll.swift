@@ -46,20 +46,21 @@
 ///
 /// let random = Direction.random(using: &randomGenerator)  // east
 /// ```
-public protocol RandomWithAll: Random {
+//public protocol RandomWithAll: Random {
+//
+//    /// An array of all possible values of `Self`.
+//    static var all: [Self] { get }
+//
+//}
+//
+//extension RandomWithAll {
+//
+//    /// Generates a random value of `Self` using `randomGenerator`.
+//    ///
+//    /// - warning: `Self.all` should be non-empty or else this will cause a crash.
+//    public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Self {
+//        return all.uncheckedRandom(using: &randomGenerator)
+//    }
 
-    /// An array of all possible values of `Self`.
-    static var all: [Self] { get }
+//}
 
-}
-
-extension RandomWithAll {
-
-    /// Generates a random value of `Self` using `randomGenerator`.
-    ///
-    /// - warning: `Self.all` should be non-empty or else this will cause a crash.
-    public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Self {
-        return all.uncheckedRandom(using: &randomGenerator)
-    }
-
-}

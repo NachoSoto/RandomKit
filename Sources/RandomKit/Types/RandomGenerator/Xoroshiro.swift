@@ -64,9 +64,9 @@ public struct Xoroshiro: RandomBytesGenerator, Seedable, SeedableFromRandomGener
     /// Creates an instance seeded with `randomGenerator`.
     public init<R: RandomGenerator>(seededWith randomGenerator: inout R) {
         var seed: Seed = (0, 0)
-        repeat {
-            randomGenerator.randomize(value: &seed)
-        } while seed == (0, 0)
+//        repeat {
+//            randomGenerator.randomize(value: &seed)
+//        } while seed == (0, 0)
         self.init(seed: seed)
     }
 

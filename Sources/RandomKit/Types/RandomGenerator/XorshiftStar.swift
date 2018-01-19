@@ -73,9 +73,9 @@ public struct XorshiftStar: RandomBytesGenerator, Seedable, SeedableFromRandomGe
             }
             return true
         }
-        repeat {
-            randomGenerator.randomize(value: &seed)
-        } while isZero()
+//        repeat {
+//            randomGenerator.randomize(value: &seed)
+//        } while isZero()
         self.init(seed: seed)
     }
 

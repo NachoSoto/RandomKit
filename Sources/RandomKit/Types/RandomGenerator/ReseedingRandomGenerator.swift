@@ -129,7 +129,7 @@ extension ReseedingRandomGenerator: RandomGenerator {
     public mutating func randomize(buffer: UnsafeMutableRawPointer, size: Int) {
         reseedIfNecessary()
         _bytesGenerated = _bytesGenerated._saturatingAddPositive(size)
-        base.randomize(buffer: buffer, size: size)
+//        base.randomize(buffer: buffer, size: size)
     }
 
     /// Generates a random unsigned 64-bit integer.

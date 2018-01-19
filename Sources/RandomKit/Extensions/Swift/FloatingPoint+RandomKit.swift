@@ -102,7 +102,8 @@ extension Double: Random, RandomToValue, RandomThroughValue, RandomInRange, Rand
 
     /// Generates a random value of `Self` using `randomGenerator`.
     public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Double {
-        return randomGenerator.randomClosed64()
+        return 0
+//        return randomGenerator.randomClosed64()
     }
 
 }
@@ -111,7 +112,8 @@ extension Float: Random, RandomToValue, RandomThroughValue, RandomInRange, Rando
 
     /// Generates a random value of `Self` using `randomGenerator`.
     public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Float {
-        return randomGenerator.randomClosed32()
+        return 0
+//        return randomGenerator.randomClosed32()
     }
 
 }

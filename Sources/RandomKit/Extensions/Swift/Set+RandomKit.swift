@@ -37,7 +37,7 @@ private extension Set {
     }
 }
 
-extension Set: RandomRetrievableInRange {}
+//extension Set: RandomRetrievableInRange {}
 
 extension Set where Element: Random {
     /// Creates a set of random elements using `randomGenerator`.

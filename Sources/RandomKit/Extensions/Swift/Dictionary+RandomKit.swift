@@ -25,41 +25,41 @@
 //  THE SOFTWARE.
 //
 
-extension Dictionary: RandomRetrievableInRange, Shuffleable, UniqueShuffleable {
-
-    /// Shuffles the elements in `self` and returns the result.
-    public func shuffled<R: RandomGenerator>(using randomGenerator: inout R) -> Dictionary {
-        var copy = self
-        copy.shuffle(using: &randomGenerator)
-        return copy
-    }
-
-    /// Shuffles the elements in `self`.
-    public mutating func shuffle<R: RandomGenerator>(using randomGenerator: inout R) {
-        var values = Array(self.values)
-        values.shuffle(using: &randomGenerator)
-        for (key, value) in zip(keys, values) {
-            self[key] = value
-        }
-    }
-
-    /// Shuffles the elements in `self` in a unique order and returns the result.
-    public func shuffledUnique<R: RandomGenerator>(using randomGenerator: inout R) -> Dictionary {
-        var copy = self
-        copy.shuffleUnique(using: &randomGenerator)
-        return copy
-    }
-
-    /// Shuffles the elements in `self` in a unique order.
-    public mutating func shuffleUnique<R: RandomGenerator>(using randomGenerator: inout R) {
-        var values = Array(self.values)
-        values.shuffle(using: &randomGenerator)
-        for (key, value) in zip(keys, values) {
-            self[key] = value
-        }
-    }
-
-}
+//extension Dictionary: RandomRetrievableInRange, Shuffleable, UniqueShuffleable {
+//
+//    /// Shuffles the elements in `self` and returns the result.
+//    public func shuffled<R: RandomGenerator>(using randomGenerator: inout R) -> Dictionary {
+//        var copy = self
+//        copy.shuffle(using: &randomGenerator)
+//        return copy
+//    }
+//
+//    /// Shuffles the elements in `self`.
+//    public mutating func shuffle<R: RandomGenerator>(using randomGenerator: inout R) {
+//        var values = Array(self.values)
+//        values.shuffle(using: &randomGenerator)
+//        for (key, value) in zip(keys, values) {
+//            self[key] = value
+//        }
+//    }
+//
+//    /// Shuffles the elements in `self` in a unique order and returns the result.
+//    public func shuffledUnique<R: RandomGenerator>(using randomGenerator: inout R) -> Dictionary {
+//        var copy = self
+//        copy.shuffleUnique(using: &randomGenerator)
+//        return copy
+//    }
+//
+//    /// Shuffles the elements in `self` in a unique order.
+//    public mutating func shuffleUnique<R: RandomGenerator>(using randomGenerator: inout R) {
+//        var values = Array(self.values)
+//        values.shuffle(using: &randomGenerator)
+//        for (key, value) in zip(keys, values) {
+//            self[key] = value
+//        }
+//    }
+//
+//}
 
 private extension Dictionary {
     init<K: Sequence, V: Sequence>(count: Int, keys: K, values: V) where K.Iterator.Element == Key, V.Iterator.Element == Value {

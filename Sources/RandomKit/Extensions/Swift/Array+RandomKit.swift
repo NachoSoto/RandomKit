@@ -49,7 +49,7 @@ extension Array {
     public init<R: RandomGenerator>(unsafeRandomCount: Int, using randomGenerator: inout R) {
         let (array, pointer) = Array._uninitialized(count: unsafeRandomCount)
         let size = unsafeRandomCount &* MemoryLayout<Element>.stride
-        randomGenerator.randomize(buffer: pointer, size: size)
+//        randomGenerator.randomize(buffer: pointer, size: size)
         self = array
     }
 }

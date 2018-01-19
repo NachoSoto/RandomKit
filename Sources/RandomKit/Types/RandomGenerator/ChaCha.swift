@@ -93,8 +93,9 @@ public struct ChaCha: RandomBytesGenerator, Seedable, SeedableFromSequence, Seed
 
     /// Creates an instance seeded with `randomGenerator`.
     public init<R: RandomGenerator>(seededWith randomGenerator: inout R) {
-        var seed: _Array8<UInt32> = randomGenerator.randomUnsafeValue()
-        self.init(seed: UnsafeBufferPointer(start: &seed.0, count: ChaCha._keyCount))
+        fatalError()
+//        var seed: _Array8<UInt32> = randomGenerator.randomUnsafeValue()
+//        self.init(seed: UnsafeBufferPointer(start: &seed.0, count: ChaCha._keyCount))
     }
 
     private mutating func _reset() {

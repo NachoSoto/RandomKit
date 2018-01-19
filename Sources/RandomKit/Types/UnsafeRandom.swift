@@ -43,22 +43,23 @@
 public protocol UnsafeRandom: Random {
 
     /// The base randomizable value for `Self`.
-    static var randomizableValue: Self { get }
+//    static var randomizableValue: Self { get }
 
 }
 
-extension UnsafeRandom {
+//extension UnsafeRandom {
+//
+//    /// The base randomizable value for `Self`.
+//    public static var randomizableValue: Self {
+//        return _unsafeValue()
+//    }
+//
+//    /// Generates a random value of `Self` using `randomGenerator`.
+//    public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Self {
+//        var value = randomizableValue
+//        randomGenerator.randomize(value: &value)
+//        return value
+//    }
+//
+//}
 
-    /// The base randomizable value for `Self`.
-    public static var randomizableValue: Self {
-        return _unsafeValue()
-    }
-
-    /// Generates a random value of `Self` using `randomGenerator`.
-    public static func random<R: RandomGenerator>(using randomGenerator: inout R) -> Self {
-        var value = randomizableValue
-        randomGenerator.randomize(value: &value)
-        return value
-    }
-
-}
